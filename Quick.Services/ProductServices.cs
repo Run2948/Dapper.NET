@@ -13,11 +13,13 @@ namespace Quick.Services
 {
     public class ProductServices: IProductServices
     {
-        protected readonly IProductRepository _productRepository;
-        public ProductServices(IProductRepository productRepository)
-        {
-            _productRepository = productRepository;
-        }
+        //protected readonly IProductRepository _productRepository;
+        //public ProductServices(IProductRepository productRepository)
+        //{
+        //    _productRepository = productRepository;
+        //}
+
+        public IProductRepository _productRepository { get; set; }
 
         public List<Product> GetList()
         {

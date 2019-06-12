@@ -9,18 +9,21 @@ namespace Quick.Web.Controllers
 {
     public class ProductController : Controller
     {
-        protected readonly IProductServices _iProductServices;
+        //protected readonly IProductServices productServices;
 
-        public ProductController(IProductServices iProductServices)
-        {
-            _iProductServices = iProductServices;
-        }
+        //public ProductController(IProductServices productServices)
+        //{
+        //    _productServices = productServices;
+        //}
+
+        public IProductServices _productServices { get; set; }
 
         // GET: Product
         public ActionResult Index()
         {
-            var list = _iProductServices.GetList();
+            var list = _productServices.GetList();
             return View(list);
         }
+
     }
 }

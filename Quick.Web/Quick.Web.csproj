@@ -129,6 +129,14 @@
       <Project>{1e12f963-c0ad-4b73-adcf-5032f6cee44c}</Project>
       <Name>Quick.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Quick.Repository\Quick.Repository.csproj">
+      <Project>{3f39c04a-a615-4583-b984-79333abf01b4}</Project>
+      <Name>Quick.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Quick.Services\Quick.Services.csproj">
+      <Project>{6f903821-4f7c-4290-b7d7-8e871b1e4bcc}</Project>
+      <Name>Quick.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
