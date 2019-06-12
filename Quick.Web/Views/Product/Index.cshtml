@@ -1,0 +1,28 @@
+﻿@model List<Product>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>产品列表</h2>
+<table width="900" height="400">
+    <thead>
+        <tr>
+            <th>编号</th>
+            <th>产品名</th>
+            <th>价格</th>
+            <th>数量</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Count</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
