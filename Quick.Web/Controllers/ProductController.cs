@@ -10,10 +10,12 @@ namespace Quick.Web.Controllers
     public class ProductController : Controller
     {
         protected readonly ProductBLL _bllProduct;
+
         public ProductController()
         {
             _bllProduct = new ProductBLL();
         }
+
         // GET: Product
         public ActionResult Index()
         {
