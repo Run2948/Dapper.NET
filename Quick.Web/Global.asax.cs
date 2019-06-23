@@ -43,13 +43,13 @@ namespace Quick.Web
             //根据名称约定（服务层的接口和实现均以Service结尾），实现服务接口和服务实现的依赖
             builder.RegisterAssemblyTypes(Assembly.Load("Quick.Services"))
               .Where(t => t.Name.EndsWith("Services"))
-              .AsImplementedInterfaces(); //把该具体实现类注册为它的所有接口
+              .AsImplementedInterfaces() //把该具体实现类注册为它的所有接口
+              .PropertiesAutowired(PropertyWiringOptions.PreserveSetValues); // 开启属性注入方式 
 
             //根据名称约定（数据访问层的接口和实现均以Repository结尾），实现数据访问接口和数据访问实现的依赖
             builder.RegisterAssemblyTypes(Assembly.Load("Quick.Repository"))
-              .Where(t => t.Name.EndsWith("Repository"))
-              .AsImplementedInterfaces()  //把该具体实现类注册为它的所有接口
-              .PropertiesAutowired(PropertyWiringOptions.PreserveSetValues); // 开启属性注入方式 
+                .Where(t => t.Name.EndsWith("Repository"))
+                .AsImplementedInterfaces(); //把该具体实现类注册为它的所有接口
         }
     }
 }
